@@ -1,0 +1,44 @@
+---
+title: "Toxic Language in Online Comments"
+format: html
+editor: visual
+---
+
+## Introduction
+
+Topic: Our model will predict the toxicity level of comments on independent news sites, using the archived data from Civil Comments, a third-party comment moderator. 
+
+Questions of Interest: At least one for regression **and** one for classification. 
+
+- Regression: 
+
+  - How potent is toxic language in the comments sections on independent news sites? Does the subject demographic affect the level of toxicity of the comment? 
+
+- Classification:
+
+  - Is the comment toxic or not toxic? 
+
+## Literature Review
+
+Online hate speech is so common that about 91% of content creators admit that they have had at least one experience with hate comments or harassment online (Thomas et al., 2022). The subject of hate tends to be social demographics and identifiers, like religion, race, gender, and socioeconomic background (Castaño-Pulgarín et al., 2021). People who are making these comments tend to use less complex language, have been motivated to express their hate during the trump administration, and tend to be focused on “purity, and respect of authority” more than justice and fairness (Castaño-Pulgarín et al., 2021). Content creators find that hate speech is so commonly an obstacle in their careers that they suggest those without the “thick skin” to handle the burden of harassment should avoid any serious pursuit of a career in online content creation (Thomas et al., 2022). People have varying experiences with the phenomenon, though, and it can be hard to define harassment and hate speech for the purpose of moderating speech in comment sections (Castaño-Pulgarín et al., 2021; Thomas et al., 2022). 
+
+Certain demographics experience more hate than others. Castano-Pulgarín et al. (2021) find that the Islam religion is the most hated religion in the world. People who are transgender, women, people with melanated skin, and people with less resources or in nations with less resources tend to experience more hate than other groups. The anonymity of online interactions heightens audacity of those with social psychological problems (Castaño-Pulgarín et al., 2021). 
+
+The Civil Comments platform was made as an attempt to lessen the trend of online hate and harassment by offering an opportunity for human moderation (Bogdanoff, 2017). Commenters on sites were able to moderate the comments under their post to publish the post (Bogdanoff, 2017). While it was scalable and introduced a pathway for civil online communication, the platform suffered as a third-party, paid addition to a website. Their clientele was not often willing to pay for the service, so Civil Comments ended their operations in 2017 (Bogdanoff, 2017), despite the immense strain of intense, relatively frequent harassment from anonymous users on content creators and the average social media or online user.
+
+## Load Data
+
+```{r}
+toxicdata <- read.csv("toxicity_data.csv")
+head(toxicdata)
+```
+
+## References
+
+Bogdanoff, A. (2017, December 21). *Saying goodbye to Civil Comments*. Medium. [https://medium.com/\@aja_15265/saying-goodbye-to-civil-comments-41859d3a2b1d](https://medium.com/@aja_15265/saying-goodbye-to-civil-comments-41859d3a2b1d)
+
+Castaño-Pulgarín, S. A., Suárez-Betancur, N., Tilano Vega, L. M., & Herrera López, H. M. (2021). Internet, social media and online hate speech. Systematic review. *Aggression and Violent Behavior, 58*, Article 101608. <https://doi.org/10.1016/j.avb.2021.101608>
+
+Jigsaw/Conversation AI. (2019). *Jigsaw unintended bias in toxicity classification* \[Data set\]. Kaggle. <https://www.kaggle.com/c/jigsaw-unintended-bias-in-toxicity-classification>
+
+Thomas, K., Kelley, P. G., Consolvo, S., Samermit, P., & Bursztein, E. (2022). “It’s common and a part of being a content creator”: Understanding how creators experience and cope with hate and harassment online. In *Proceedings of the 2022 CHI Conference on Human Factors in Computing Systems* (Article 121). Association for Computing Machinery. <https://doi.org/10.1145/3491102.3501879>
